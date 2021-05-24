@@ -60,3 +60,13 @@ Spring MVC,xml conffig
 Spring MVC,java config1
 Spring MVC,java config2
 Spring MVC,Sptring boot
+
+
+
+---
+
+
+본인의 절대 경로, 포트 다음부터 !
+
+이번의 경우 /helloweb/images/dooly.png
+
