@@ -7,4 +7,13 @@ delete from emaillist01 where no=?;
 
 insert
 	into emaillist01
-values(null,'둘','리', 'dooly@gmail.com')
+values(null,'둘','리', 'dooly@gmail.com');
+
+
+
+
+-- schme
+
+use webdb;
+
+desc guestbook01;
