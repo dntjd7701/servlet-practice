@@ -2,7 +2,8 @@ package com.douzone.guestbook.vo;
 
 public class GuestbookVo {
 	private Long no;
-	private String namel;
+	private int count;
+	private String name;
 	private String password;
 	private String message;
 	
@@ -10,14 +11,20 @@ public class GuestbookVo {
 	public Long getNo() {
 		return no;
 	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 	public void setNo(Long no) {
 		this.no = no;
 	}
-	public String getNamel() {
-		return namel;
+	public String getName() {
+		return name;
 	}
-	public void setNamel(String namel) {
-		this.namel = namel;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getPassword() {
 		return password;
@@ -42,9 +49,11 @@ public class GuestbookVo {
 
 	@Override
 	public String toString() {
-		return "GuestbookVo [no=" + no + ", namel=" + namel + ", password=" + password + ", message=" + message
+		return "GuestbookVo [count=" + count + ", name=" + name + ", password=" + password + ", message=" + message
 				+ ", regDate=" + regDate + "]";
 	}
+
+
 	
 	
 	

@@ -1,4 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="com.douzone.guestbook.dao.GuestbookDao"%>
+<%@page import="com.douzone.guestbook.vo.GuestbookVo"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" 
+	pageEncoding="UTF-8"%>
+	
+	
+	
+<%
+	List<GuestbookVo> list = new GuestbookDao().findAll();
+	int index = list.size();
+%>	
 	
 <html>
 <head>
@@ -17,24 +28,32 @@
 			<td colspan=4><textarea name="message" cols=60 rows=5></textarea></td>
 		</tr>
 		<tr>
-			<td colspan=4 align=right><input type="submit" VALUE=" 등록 "></td>
+			<td colspan=4 align=right><input type="submit" VALUE=" 등록 " ></td>
 		</tr>
 	</table>
 	</form>
 
 	
 	<br>
-	<table width=510 border=1>
-		<tr>
-			<td>[1]</td>
-			<td>안대혁</td>
-			<td>2013-01-15</td>
-			<td><a href="<%=request.getContextPath() %>/deleteform.jsp">삭제</a></td>
-		</tr>
-		<tr>
-			<td colspan=4>안녕하세요</td>
-		</tr>
-	</table>
+	
+	<%for(GuestbookVo vo : list) { %>
+		<form action="<%=request.getContextPath() %>/deleteform.jsp" method="post">
+			<!-- <input type="number" name="no"> -->
+			<table width=510 border=1>
+				<tr>
+					<td>[<%=index-- %>]</td>
+					<td><%=vo.getName() %></td>
+					<td><%=vo.getRegDate() %></td>
+					<td><a href="<%=request.getContextPath() %>/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
+				</tr>
+				<tr>
+					<td colspan=4><pre><%=vo.getMessage() %></pre> </td>
+				</tr>
+			</table>
+		</form>
+	<%
+		}	
+	%>
 	
 	
 </body>
