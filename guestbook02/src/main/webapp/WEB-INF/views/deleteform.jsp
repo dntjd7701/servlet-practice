@@ -16,8 +16,9 @@
 </head>
 <body>
 
-	<form action="<%=request.getContextPath() %>/gb?a=delete" method="post">
-		<input type='hidden' name="no" value="<%=no %>">
+	<form action="<%=request.getContextPath() %>/gb" method="post">
+	<input type="hidden" name="a" value="delete">
+			<input type='hidden' name="no" value="<%=no %>">
 		<table>
 			<tr>
 				<td>비밀번호</td>
@@ -27,7 +28,7 @@
 		</table>
 	</form>	
 	
-	<a	href="<%=request.getContextPath()%>/gb?a=">메인으로 돌아가기</a> <br />
+	<a	href="<%=request.getContextPath()%>/gb">메인으로 돌아가기</a> <br />
 	
 </body>
 </html>
