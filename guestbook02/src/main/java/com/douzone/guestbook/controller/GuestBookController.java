@@ -22,7 +22,7 @@ public class GuestBookController extends HttpServlet {
 		String action = request.getParameter("a");
 		if ("deleteform".equals(action)) {
 			//view로 포워딩 
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/deleteform.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/guestbook/deleteform.jsp");
 			rd.forward(request, response);
 			
 		} else if("delete".equals(action)) {
