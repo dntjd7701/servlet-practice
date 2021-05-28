@@ -6,6 +6,7 @@
 	<artifactId>servlet-practice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	
 	<modules>
 		<module>helloweb</module>
 		<module>emaillist01</module>
