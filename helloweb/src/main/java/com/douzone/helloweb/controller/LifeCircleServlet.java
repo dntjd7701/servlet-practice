@@ -29,6 +29,7 @@ public class LifeCircleServlet extends HttpServlet {
 		System.out.println("LifeCircleServlet.doGet(...) called");
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("LifeCircleServlet.doPost(..) called");
 		doGet(request, response);
 	}
 

@@ -7,9 +7,9 @@
 	
 	
 <%
-	List<GuestbookVo> list = new GuestbookDao().findAll();
-	int index = list.size();
-%>	
+			List<GuestbookVo> list = new GuestbookDao().findAll();
+				int index = list.size();
+			%>	
 	
 <html>
 <head>

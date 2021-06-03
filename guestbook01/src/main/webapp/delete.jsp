@@ -5,18 +5,17 @@
     
     
  <%
- 	request.setCharacterEncoding("utf-8");
- 	Long no = Long.parseLong(request.getParameter("no"));
- 	String password = request.getParameter("delete_password");
- 	boolean result = false;
-	result = new GuestbookDao().delete(no, password);
-	
-	
- 	 if(result != false){
-		response.sendRedirect(request.getContextPath());
- 	} else{
- 		
- %>
+         request.setCharacterEncoding("utf-8");
+          	Long no = Long.parseLong(request.getParameter("no"));
+          	String password = request.getParameter("delete_password");
+          	boolean result = false;
+         	result = new GuestbookDao().delete(no, password);
+         	
+         	
+          	 if(result != false){
+         		response.sendRedirect(request.getContextPath());
+          	} else{
+         %>
  		<a href="<%=request.getContextPath()%>">잘못 입력하셨습니다.</a> <br />
  <%		
  	} 
